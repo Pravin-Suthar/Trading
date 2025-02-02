@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
-     const Reliance = sequelize.define(
-        `Reliance`,
+     const Nifty = sequelize.define(
+        `Nifty`,
         {
           id: {
             allowNull: false,
@@ -42,9 +42,9 @@ module.exports = (sequelize, DataTypes) => {
           paranoid: true,
           updatedAt: "updatedAt",
           createdAt: "createdAt",
-          tableName: `Reliance`
+          tableName: `Nifty`
         }
       );
   
-    return Reliance;
+    return Nifty;
   };
