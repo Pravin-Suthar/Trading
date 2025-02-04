@@ -1,26 +1,28 @@
-Nifty Data Fetching and Analytics API
+## Nifty Data Fetching and Analytics API  
 
+### Returns  
 
-Returns:
-Year	Annual Return	Total Profit (Points)
-2021-01-01 to 2021-12-31	17%	2475.05
-2022-01-01 to 2022-12-31	11%	1986.00
-2023-01-01 to 2023-12-31	7.9%	1426.85
-2024-01-01 to 2024-12-31	11%	2483.50
-Parameters Used for Testing:
-json
-Copy
-Edit
+| Year | Annual Return | Total Profit (Points) |  
+|------|--------------|----------------------|  
+| 2021-01-01 to 2021-12-31 | 17%  | 2475.05  |  
+| 2022-01-01 to 2022-12-31 | 11%  | 1986.00  |  
+| 2023-01-01 to 2023-12-31 | 7.9% | 1426.85  |  
+| 2024-01-01 to 2024-12-31 | 11%  | 2483.50  |  
+
+### Parameters Used for Testing  
+
+```json
 {
-  "startDate": "2021-01-01T00:00:01",   // Start date of the analysis  
-  "endDate": "2024-12-31T23:00:00",     // End date of the analysis  
-  "entryBuffer": 1,                      // Extra buffer for entry from the range breakout  
-  "slBuffer": 1,                          // Extra buffer for stop-loss from the range breakout  
-  "takeProfitBuffer": 1000,               // Take profit buffer (observed that letting trades run yields better returns)  
-  "exitTradeTime": "15:00:00",            // Time to exit trade if SL/TP is not hit  
-  "considerCandleStart": "11:15:00",      // Start time of the range consideration  
-  "considerCandleEnd": "11:29:00"         // End time of the range consideration  
+  "startDate": "2021-01-01T00:00:01",
+  "endDate": "2024-12-31T23:00:00",
+  "entryBuffer": 1,
+  "slBuffer": 1,
+  "takeProfitBuffer": 1000,
+  "exitTradeTime": "15:00:00",
+  "considerCandleStart": "11:15:00",
+  "considerCandleEnd": "11:29:00"
 }
+
 
 
 Overview
