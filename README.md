@@ -1,24 +1,25 @@
 Nifty Data Fetching and Analytics API
 
+
 Returns:
-
-Year	                     Annual Return	Total Profit (Points)
-2021:01:01-2021:12:31	     17%	        2475.05
-2022:01:01-2022:12:31	     11%	        1986.00
-2023:01:01-2023:12:31	     7.9%	        1426.85
-2024:01:01-2024:12:31      	 11%	        2483.50
-
-Parameters on which it was tested : 
-
+Year	Annual Return	Total Profit (Points)
+2021-01-01 to 2021-12-31	17%	2475.05
+2022-01-01 to 2022-12-31	11%	1986.00
+2023-01-01 to 2023-12-31	7.9%	1426.85
+2024-01-01 to 2024-12-31	11%	2483.50
+Parameters Used for Testing:
+json
+Copy
+Edit
 {
-    "startDate": "2021-01-01T00:00:01", // start date of the analysis
-    "endDate": "2024-12-31T23:00:00", // end date of the analysis
-    "entryBuffer": 1, // from the range breakup extra buffer when should have
-    "slBuffer": 1, // from the range breakup extra buffer when should have
-    "takeProfitBuffer": 1000, // This defined how much points take profit should but i have observed that leaving the trades run gives more returns over time hence value is 1000 which is to large
-    "exitTradeTime": "15:00:00", // this time reprent till what time we should exit the trade in case the SL / TP both are not hit
-    "considerCandleStart": "11:15:00", // the start candle of the range consideration
-    "considerCandleEnd": "11:29:00"// the end candle of the range consideration
+  "startDate": "2021-01-01T00:00:01",   // Start date of the analysis  
+  "endDate": "2024-12-31T23:00:00",     // End date of the analysis  
+  "entryBuffer": 1,                      // Extra buffer for entry from the range breakout  
+  "slBuffer": 1,                          // Extra buffer for stop-loss from the range breakout  
+  "takeProfitBuffer": 1000,               // Take profit buffer (observed that letting trades run yields better returns)  
+  "exitTradeTime": "15:00:00",            // Time to exit trade if SL/TP is not hit  
+  "considerCandleStart": "11:15:00",      // Start time of the range consideration  
+  "considerCandleEnd": "11:29:00"         // End time of the range consideration  
 }
 
 
